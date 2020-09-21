@@ -1,22 +1,20 @@
 package com.example.app.video;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class VideoList {
 
     private List<Video> list;
-    private static long count = 0;
 
-    public List<Video> getVideosList() throws InterruptedException, IOException {
+    public List<Video> getVideosList() {
         if (list == null) {
             list = setupVideos();
         }
         return list;
     }
 
-    public List<Video> setupVideos() throws InterruptedException {
+    public List<Video> setupVideos() {
         Video video = new Video();
         video.setVideoUrl("http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4");
         video.setTitle("Big Buck Bunny");

@@ -5,7 +5,6 @@ import java.io.Serializable;
 
 public class Video implements Serializable {
 
-    private long id;
     private String title;
     private String description;
     private String bgImageUrl;
@@ -14,14 +13,6 @@ public class Video implements Serializable {
     private String studio;
 
     public Video() {
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getTitle() {
@@ -75,7 +66,6 @@ public class Video implements Serializable {
     @Override
     public String toString() {
         return "Video{" +
-                "id=" + id +
                 ", title='" + title + '\'' +
                 ", videoUrl='" + videoUrl + '\'' +
                 ", backgroundImageUrl='" + bgImageUrl + '\'' +
