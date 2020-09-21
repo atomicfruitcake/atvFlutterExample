@@ -1,0 +1,10 @@
+include ':app'
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+  settingsDir,
+  '../atvFlutterExampleActivity/.android/include_flutter.groovy'
+))
+rootProject.name = "atvFlutterExample"
+
+include ':atvFlutterExampleActivity'
+project(':atvFlutterExampleActivity').projectDir = new File('../atvFlutterExampleActivity')
